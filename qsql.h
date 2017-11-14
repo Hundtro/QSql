@@ -13,15 +13,10 @@ private:
     QSqlQuery* q;
 
 public:
-    QSQL();
     QSqlDatabase* Database();
     QSqlQuery* Query();
-    void SetDriver(QString driver_name);
-    void SetServer(QString server_name);
-    void SetDatabaseName(QString database_name);
-    void SetUserName(QString user_name);
-    void SetPasswd(QString passwd);
-    void CreateConnection();
+    void AddConnectionValue(QString value);
+    void CreateConnection(QString driver);
     void OpenConnection();
     void CloseConnection();
     bool ExecuteQuery(QString command);
